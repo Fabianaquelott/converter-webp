@@ -22,11 +22,18 @@
 
 <pre><code>pip install pillow</code></pre>
 
+<p><strong>⚠️ Important:</strong> The script also requires <code>cwebp.exe</code> from Google's WebP tools. You must:</p>
+<ul>
+  <li>Download it from <a href="https://developers.google.com/speed/webp/download" target="_blank">https://developers.google.com/speed/webp/download</a></li>
+  <li>Place <code>cwebp.exe</code> in the same folder as <code>conversor.py</code>, or ensure it is available in your system's <code>PATH</code></li>
+</ul>
+
 <hr/>
 
 <h2>📁 How to Use the Script (Python Version)</h2>
 <ol>
   <li>Place your <code>.png</code> images inside the <strong>input/</strong> folder</li>
+  <li>Ensure <code>cwebp.exe</code> is available as described above</li>
   <li>Run the script:</li>
 </ol>
 
@@ -55,9 +62,11 @@
 </ol>
 <pre><code>pyinstaller --onefile --icon=icon.ico conversor.py</code></pre>
 
-<p>The compiled executable will be located in the <strong>dist/</strong> folder. Run it like this:</p>
+<p>The compiled executable will be located in the <strong>dist/</strong> folder. To run it:</p>
 
 <pre><code>./dist/conversor.exe</code></pre>
+
+<p><strong>Reminder:</strong> Make sure <code>cwebp.exe</code> is located in the same folder as the EXE, or is accessible via <code>PATH</code>.</p>
 
 <hr/>
 
