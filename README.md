@@ -34,9 +34,9 @@
 
 <p>The converted images will appear in the <strong>output/</strong> folder with various responsive sizes:</p>
 <ul>
-  <li><code>@1x</code> (e.g., 480px)</li>
-  <li><code>@2x</code> (e.g., 768px)</li>
-  <li><code>@desktop</code> (e.g., 1200px)</li>
+  <li><code>@1x</code></li>
+  <li><code>@2x</code></li>
+  <li><code>@desktop</code></li>
 </ul>
 
 <hr/>
