@@ -71,21 +71,3 @@ output/
 ├── logo@2x.webp
 └── logo@desktop.webp
 </code></pre>
-
-<hr/>
-
-<h2>💡 Example HTML Usage with <code>srcSet</code></h2>
-
-<p>You can use the converted WebP images responsively like this:</p>
-
-<pre><code>&lt;img
-  src="/images/logo@1x.webp"
-  srcset="/images/logo@1x.webp 480w,
-          /images/logo@2x.webp 768w,
-          /images/logo@desktop.webp 1200w"
-  sizes="(max-width: 600px) 480px,
-         (max-width: 1024px) 768px,
-         1200px"
-  alt="Logo"
-/&gt;
-</code></pre>
