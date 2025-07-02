@@ -1,102 +1,84 @@
-Claro! Aqui está um `README.md` em inglês, com uma apresentação bonita usando HTML dentro do Markdown, e explicações claras de uso tanto do script `.py` quanto da versão `.exe` compilada.
-
----
-
-````markdown
 <h1 align="center">🖼️ PNG to Responsive WebP Converter</h1>
 
 <p align="center">
-  A simple Python script to convert PNG images into responsive <code>.webp</code> formats with multiple sizes.<br>
-  Ideal for optimizing websites and delivering the right image size to each screen.
+  A lightweight tool to convert PNG images into responsive <code>.webp</code> formats with multiple resolutions.<br>
+  Optimized for modern websites that demand fast, flexible image delivery.
 </p>
 
 <hr/>
 
-## 🚀 Features
+<h2>🚀 Features</h2>
+<ul>
+  <li>Converts <code>.png</code> files into optimized <code>.webp</code></li>
+  <li>Creates multiple sizes (e.g., <code>@1x</code>, <code>@2x</code>, <code>@desktop</code>)</li>
+  <li>Improves page speed and responsiveness</li>
+  <li>Use as a Python script or compile to <code>.exe</code> for Windows</li>
+</ul>
 
-- ✅ Converts `.png` images into `.webp`
-- ✅ Generates multiple resolutions (e.g., `@1x`, `@2x`, `@desktop`)
-- ✅ Improves page load performance for responsive websites
-- ✅ Works as a Python script or standalone `.exe` executable
+<hr/>
 
----
+<h2>🧰 Requirements (Script Version)</h2>
+<p>Make sure you have Python 3.7+ installed, then install the required package:</p>
 
-## 🧰 Requirements (for script use)
+<pre><code>pip install pillow</code></pre>
 
-Make sure you have Python 3.7+ installed.
+<hr/>
 
-Install the required libraries:
+<h2>📁 How to Use the Script (Python Version)</h2>
+<ol>
+  <li>Place your <code>.png</code> images inside the <strong>input/</strong> folder</li>
+  <li>Run the script:</li>
+</ol>
 
-```bash
-pip install pillow
-````
+<pre><code>python conversor.py</code></pre>
 
----
+<p>The converted images will appear in the <strong>output/</strong> folder with various responsive sizes:</p>
+<ul>
+  <li><code>@1x</code> (e.g., 480px)</li>
+  <li><code>@2x</code> (e.g., 768px)</li>
+  <li><code>@desktop</code> (e.g., 1200px)</li>
+</ul>
 
-## 📁 How to Use (Python Script)
+<hr/>
 
-1. Place your `.png` images inside the `input/` folder.
-2. Run the script:
+<h2>🪄 How to Compile to EXE (Windows)</h2>
 
-```bash
-python conversor.py
-```
+<p>This allows you to run the converter without needing Python installed:</p>
 
-3. The output images will be saved to the `output/` folder in WebP format with different sizes:
+<ol>
+  <li>Install PyInstaller:</li>
+</ol>
+<pre><code>pip install pyinstaller</code></pre>
 
-   * `@1x` (e.g., 480px)
-   * `@2x` (e.g., 768px)
-   * `@desktop` (e.g., 1200px)
+<ol start="2">
+  <li>Compile the script:</li>
+</ol>
+<pre><code>pyinstaller --onefile --icon=icon.ico conversor.py</code></pre>
 
----
+<p>The compiled executable will be located in the <strong>dist/</strong> folder. Run it like this:</p>
 
-## 🪄 How to Compile to .EXE
+<pre><code>./dist/conversor.exe</code></pre>
 
-> 💡 Useful if you want to run the tool on Windows without installing Python.
+<hr/>
 
-1. Make sure you have **PyInstaller** installed:
+<h2>🖼️ Output Example</h2>
 
-```bash
-pip install pyinstaller
-```
+<p>If your source file is <code>logo.png</code>, the script will generate:</p>
 
-2. Run this command to generate the `.exe`:
-
-```bash
-pyinstaller --onefile --icon=icon.ico conversor.py
-```
-
-3. The compiled `.exe` will be located in the `dist/` folder.
-
-To run:
-
-```bash
-./dist/conversor.exe
-```
-
-It will behave the same as the Python version — looking for PNGs in `input/` and saving to `output/`.
-
----
-
-## 🖼️ Output Naming Example
-
-If you have a file named `logo.png`, the script will generate:
-
-```
+<pre><code>
 output/
 ├── logo@1x.webp
 ├── logo@2x.webp
 └── logo@desktop.webp
-```
+</code></pre>
 
----
+<hr/>
 
-## 💡 Tip: HTML Usage with srcSet
+<h2>💡 Example HTML Usage with <code>srcSet</code></h2>
 
-Use the images responsively in your HTML like this:
+<p>You can use the converted WebP images responsively like this:</p>
 
-```html
-<img
+<pre><code>&lt;img
   src="/images/logo@1x.webp"
   srcset="/images/logo@1x.webp 480w,
           /images/logo@2x.webp 768w,
@@ -105,20 +87,5 @@ Use the images responsively in your HTML like this:
          (max-width: 1024px) 768px,
          1200px"
   alt="Logo"
-/>
-```
-
----
-
-## 📄 License
-
-MIT — Feel free to use, share, and improve!
-
----
-
-```
-
----
-
-Se quiser que eu gere o conteúdo direto no seu arquivo local ou personalize mais (como sufixos, tamanhos, caminhos, ícone do `.exe`, etc.), posso te ajudar com isso também.
-```
+/&gt;
+</code></pre>
